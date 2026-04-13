@@ -1,0 +1,27 @@
+/* Color Theme */
+
+.bg-navy {
+    background-color: #001f3f;
+}
+
+.btn-navy {
+    background-color: #001f3f;
+    color: white;
+}
+
+.btn-gold {
+    background-color: gold;
+    color: black;
+}
+
+.hero {
+    background-color: #001f3f;
+    color: white;
+    padding: 60px;
+}
+
+/* Hide dining initially */
+
+#diningList {
+    display: none;
+}

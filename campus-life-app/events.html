@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Campus Events</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-navy">
+
+<div class="container">
+
+<a class="navbar-brand"
+href="index.html">
+
+Campus Life App
+
+</a>
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link"
+href="index.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link"
+href="events.html">Events</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link"
+href="dining.html">Dining</a>
+</li>
+
+</ul>
+
+</div>
+
+</nav>
+
+<div class="container mt-5">
+
+<h2 class="text-center">
+
+Upcoming Campus Events
+
+</h2>
+
+<div class="row mt-4">
+
+<!-- Event Card -->
+<div class="col-md-4">
+
+<div class="card">
+
+<div class="card-body">
+
+<h5 class="card-title">
+
+Spring Festival
+
+</h5>
+
+<p>
+
+Join us for music,
+food, and games!
+
+</p>
+
+<button
+class="btn btn-gold"
+onclick="registerEvent('Spring Festival')">
+
+Register
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Event Card -->
+<div class="col-md-4">
+
+<div class="card">
+
+<div class="card-body">
+
+<h5>
+
+Study Night
+
+</h5>
+
+<p>
+
+Free snacks and tutoring.
+
+</p>
+
+<button
+class="btn btn-gold"
+onclick="registerEvent('Study Night')">
+
+Register
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Event Card -->
+<div class="col-md-4">
+
+<div class="card">
+
+<div class="card-body">
+
+<h5>
+
+Career Fair
+
+</h5>
+
+<p>
+
+Meet employers and network.
+
+</p>
+
+<button
+class="btn btn-gold"
+onclick="registerEvent('Career Fair')">
+
+Register
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<p id="eventMessage"
+class="text-center mt-4"></p>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
