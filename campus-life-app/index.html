@@ -1,115 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Campus Life App - Home</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Life App — Home</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-navy">
+  <!-- ═══ NAVBAR ═══════════════════════════════════════════════════ -->
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/centenary-logo.png" alt="Campus Life Logo" />
+        <span>
+          Campus Life App
+          <span class="brand-sub">Centenary University</span>
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="dining.html">Dining</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-        <a class="navbar-brand" href="index.html">
-            Campus Life App
-        </a>
+  <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-badge">🏛️ Welcome to Campus Life</div>
+      <h1>Your <span>Campus.</span><br>Your Community.</h1>
+      <p>Everything you need to make the most of university life — events, dining, weather and more — all in one place.</p>
+      <button class="btn-gold" onclick="showMessage()">
+        🎓 Click Welcome Message
+      </button>
+      <div class="message-box" id="welcome-message"></div>
+    </div>
+  </section>
 
-        <button class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav">
-
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
-
-        <div class="collapse navbar-collapse"
-            id="navbarNav">
-
-            <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                        href="index.html">Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                        href="events.html">Events</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                        href="dining.html">Dining</a>
-                </li>
-
-            </ul>
-
+  <!-- ═══ STATS STRIP ═══════════════════════════════════════════════ -->
+  <section class="stats-strip">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <span class="stat-number">3,200+</span>
+            <span class="stat-label">Students</span>
+          </div>
         </div>
-
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <span class="stat-number">80+</span>
+            <span class="stat-label">Programs</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <span class="stat-number">40+</span>
+            <span class="stat-label">Clubs</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <span class="stat-number">150+</span>
+            <span class="stat-label">Yearly Events</span>
+          </div>
+        </div>
+      </div>
     </div>
-</nav>
+  </section>
 
-<!-- Hero Section -->
-<header class="hero text-center">
-
-    <div class="container">
-
-        <h1>
-            Welcome to Centenary University Campus Life
-        </h1>
-
-        <p>
-            Your hub for campus events, dining, and updates.
-        </p>
-
-        <button
-            class="btn btn-gold"
-            onclick="showMessage()">
-
-            Click for Welcome Message
-
-        </button>
-
-        <p id="welcomeMessage"></p>
-
+  <!-- ═══ CAROUSEL ═════════════════════════════════════════════════ -->
+  <div id="campusCarousel" class="carousel slide campus-carousel" data-bs-ride="carousel" data-bs-interval="4500">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#campusCarousel" data-bs-slide-to="0" class="active" aria-label="Campus"></button>
+      <button type="button" data-bs-target="#campusCarousel" data-bs-slide-to="1" aria-label="Events"></button>
+      <button type="button" data-bs-target="#campusCarousel" data-bs-slide-to="2" aria-label="Dining"></button>
     </div>
-
-</header>
-
-<!-- Weather Section -->
-<section class="container text-center mt-5">
-
-    <h2>Campus Weather</h2>
-
-    <button
-        class="btn btn-navy"
-        onclick="getWeather()">
-
-        Get Weather
-
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/campus.png" alt="Campus" />
+        <div class="carousel-caption">
+          <h5>Beautiful Campus</h5>
+          <p>Explore our stunning grounds and state-of-the-art facilities.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/events.png" alt="Events" />
+        <div class="carousel-caption">
+          <h5>Vibrant Events</h5>
+          <p>Join hundreds of exciting events happening every semester.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/dining.png" alt="Dining" />
+        <div class="carousel-caption">
+          <h5>Great Dining</h5>
+          <p>Multiple dining options to fuel your day, every day.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#campusCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
     </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#campusCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
-    <p id="weatherResult"></p>
+  <!-- ═══ WEATHER ═══════════════════════════════════════════════════ -->
+  <section class="weather-section">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title">Campus <span>Weather</span></h2>
+        <div class="section-divider mx-auto"></div>
+        <p class="section-subtitle">Live conditions for Hackettstown, NJ</p>
+      </div>
+      <div class="weather-card">
+        <h3>🌤 Current Weather</h3>
+        <div class="location">📍 Hackettstown, New Jersey</div>
+        <button class="btn-gold" id="weather-btn" onclick="getWeather()">
+          Get Weather
+        </button>
+        <div id="weather-result"></div>
+      </div>
+    </div>
+  </section>
 
-</section>
+  <!-- ═══ QUICK LINKS ═══════════════════════════════════════════════ -->
+  <section style="padding: 60px 0; background: var(--navy);">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title">Explore <span>Campus Life</span></h2>
+        <div class="section-divider mx-auto"></div>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-5">
+          <a href="events.html" style="text-decoration:none;">
+            <div class="event-card p-4 d-flex align-items-center gap-3" style="border-radius:14px;">
+              <div style="font-size:2.4rem;">🎉</div>
+              <div>
+                <h5 style="font-family:'Playfair Display',serif; color:var(--white); margin-bottom:0.2rem;">Upcoming Events</h5>
+                <p style="color:var(--text-muted); font-size:0.87rem; margin:0;">Register for campus events happening this semester.</p>
+              </div>
+              <span style="color:var(--gold); margin-left:auto; font-size:1.3rem;">→</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-5">
+          <a href="dining.html" style="text-decoration:none;">
+            <div class="event-card p-4 d-flex align-items-center gap-3" style="border-radius:14px;">
+              <div style="font-size:2.4rem;">🍽️</div>
+              <div>
+                <h5 style="font-family:'Playfair Display',serif; color:var(--white); margin-bottom:0.2rem;">Dining Options</h5>
+                <p style="color:var(--text-muted); font-size:0.87rem; margin:0;">Browse all on-campus dining venues and hours.</p>
+              </div>
+              <span style="color:var(--gold); margin-left:auto; font-size:1.3rem;">→</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ═══ FOOTER ═════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Campus Life App — <a href="#">Centenary University</a> · Hackettstown, NJ</p>
+    </div>
+  </footer>
 
-<!-- Custom JS -->
-<script src="js/script.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
-
 </html>

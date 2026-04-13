@@ -1,71 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1">
-
-<title>Dining</title>
-
-<link
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-rel="stylesheet">
-
-<link rel="stylesheet"
-href="css/style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Life App — Dining</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
 
-<nav class="navbar navbar-dark bg-navy">
+  <!-- ═══ NAVBAR ═══════════════════════════════════════════════════ -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/centenary-logo.png" alt="Campus Life Logo" />
+        <span>
+          Campus Life App
+          <span class="brand-sub">Centenary University</span>
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="dining.html">Dining</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<div class="container">
+  <!-- ═══ PAGE HERO ════════════════════════════════════════════════ -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="hero-badge">🍽️ On-Campus Dining</div>
+      <h1>Campus <span style="color:var(--gold);">Dining</span></h1>
+      <p>Fuel your day with a variety of dining options available across campus, open daily.</p>
+    </div>
+  </section>
 
-<a class="navbar-brand"
-href="index.html">
+  <!-- ═══ DINING SECTION ════════════════════════════════════════════ -->
+  <section class="dining-section">
+    <div class="container">
+      <div class="row g-5 align-items-start">
 
-Campus Life App
+        <!-- Dining Image -->
+        <div class="col-lg-6">
+          <img src="images/dining.png" alt="Campus Dining Hall" class="dining-hero-img" />
+          <div class="mt-3 p-3" style="background:var(--navy); border:1px solid var(--border); border-radius:12px;">
+            <p style="color:var(--text-muted); font-size:0.85rem; margin:0; line-height:1.6;">
+              📍 <strong style="color:var(--white);">Main Dining Hall</strong> · Building A, Ground Floor<br>
+              🕗 <strong style="color:var(--white);">Hours:</strong> Mon–Fri 7:00 AM – 9:00 PM · Sat–Sun 9:00 AM – 7:00 PM
+            </p>
+          </div>
+        </div>
 
-</a>
+        <!-- Dining Options -->
+        <div class="col-lg-6">
+          <h2 class="section-title mb-1">What's <span>Available</span></h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle mb-3">
+            Click below to explore all dining venues on campus.
+          </p>
 
-</div>
+          <button class="btn-gold mb-2" id="dining-btn" onclick="toggleDining()">
+            Show Dining Options
+          </button>
 
-</nav>
+          <!-- Dining List (toggled) -->
+          <div id="dining-list" class="dining-options-list">
 
-<div class="container mt-5">
+            <div class="dining-item">
+              <div class="dining-icon">🍱</div>
+              <div class="dining-info">
+                <h6>Cafeteria</h6>
+                <span>Hot meals, salad bar, soup, and daily specials · 7AM–9PM</span>
+              </div>
+            </div>
 
-<h2 class="text-center">
+            <div class="dining-item">
+              <div class="dining-icon">☕</div>
+              <div class="dining-info">
+                <h6>Starbucks</h6>
+                <span>Coffee, teas, frappuccinos, and pastries · 7AM–7PM</span>
+              </div>
+            </div>
 
-Campus Dining Options
+            <div class="dining-item">
+              <div class="dining-icon">🥖</div>
+              <div class="dining-info">
+                <h6>Subway</h6>
+                <span>Build-your-own subs and wraps · 10AM–8PM</span>
+              </div>
+            </div>
 
-</h2>
+            <div class="dining-item">
+              <div class="dining-icon">🍕</div>
+              <div class="dining-info">
+                <h6>Pizza Station</h6>
+                <span>Fresh-baked pizza by the slice or whole pie · 11AM–9PM</span>
+              </div>
+            </div>
 
-<button
-class="btn btn-navy"
-onclick="toggleDining()">
+          </div><!-- /dining-list -->
 
-Show Dining Options
+          <!-- Meal Plan CTA -->
+          <div class="mt-4 p-4" style="background:var(--navy); border:1px solid var(--border); border-radius:14px;">
+            <h6 style="color:var(--gold); font-family:'Playfair Display',serif; font-size:1.1rem; margin-bottom:0.4rem;">🍽️ Meal Plans Available</h6>
+            <p style="color:var(--text-muted); font-size:0.87rem; line-height:1.65; margin:0;">
+              Students can choose from flexible meal plan options — including unlimited, block, and commuter plans. Dining dollars accepted at all locations.
+            </p>
+          </div>
+        </div>
 
-</button>
+      </div><!-- /row -->
 
-<ul id="diningList"
-class="mt-3">
+      <!-- Bottom CTA -->
+      <div class="text-center mt-5 pt-3">
+        <a href="index.html" class="btn-outline-gold">← Back to Home</a>
+      </div>
+    </div>
+  </section>
 
-<li>Cafeteria</li>
-<li>Starbucks</li>
-<li>Subway</li>
-<li>Pizza Station</li>
+  <!-- ═══ FOOTER ═════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Campus Life App — <a href="#">Centenary University</a> · Hackettstown, NJ</p>
+    </div>
+  </footer>
 
-</ul>
-
-</div>
-
-<script src="js/script.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
-
 </html>
